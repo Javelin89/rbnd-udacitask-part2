@@ -21,5 +21,4 @@ module Listable
      	value = ""
     end
   end
-
 end

@@ -1,8 +1,9 @@
 class UdaciList
-  attr_reader :title, :items
+  attr_reader :items
+  attr_accessor :title
 
-  def initialize(options={})
-    @title = options[:title]
+  def initialize(title = "Untitled List")
+    @title = :title
     @items = []
   end
 
@@ -19,6 +20,16 @@ class UdaciList
     end
   end
 
+  def filter(type)
+    if type.downcase == "event"
+      puts EventItem::event_items.to_s
+    elsif type.downcase == "todo"
+      puts TodoItem::todo_items.to_s
+    elsif type.downcase == "link"
+      puts LinkItem::link_items.to_s 
+    end     
+  end
+
   def delete(index)
     if @items.length >= index
       @items.delete_at(index - 1)
@@ -31,8 +42,11 @@ class UdaciList
     puts "-" * @title.length
     puts @title
     puts "-" * @title.length
+    rows = []
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      rows << [position +1 , item.details]
     end
+    table = Terminal::Table.new :rows => rows
+    puts table
   end
 end

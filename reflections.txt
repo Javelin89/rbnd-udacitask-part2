@@ -1,13 +1,22 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+I used “terminal-table” to draw a table around the list. In a future step it would be interesting to put each item in a seperate field, but I didn’t have the time for it. 
+
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Feature 1. You can now change the title of a list
+  b) Feature 2. I added an item type “notes”. This simply takes a string and adds it to the list for notes. 
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+I am not exactly sure, I guess it was around 3 or 4 hours. 
+
 2. What was the most rewarding challenge you conquered?
+In the beginning I had trouble making the errors work in the beginning. It was nice to finally see them working in the end. It’s a while ago, so I don’t remember what exactly the challenge was. 
+
 3. What two additional features did you build? Why?
+see above
+
 4. Where do you still have room to grow?
+I think I have room to grow in understanding the structure of a ruby project and to visualize it in my mind. I think this would be very helpful in writing code fast. 

@@ -8,6 +8,7 @@ require_relative "lib/udacilist"
 require_relative "lib/todo"
 require_relative "lib/event"
 require_relative "lib/link"
+require_relative "lib/note"
 
 list = UdaciList.new(title: "Julia's Stuff")
 list.add("todo", "Buy more cat food", due: "2016-02-03", priority: "low")
@@ -48,4 +49,9 @@ new_list.filter("event")
 
 # Feature 1 - Change name of untitled list
 new_list.title = "Another name"
+new_list.all
+
+# Feature 2 - Add notes
+new_list.add("note", "Udacity is great")
+
 new_list.all

@@ -15,6 +15,8 @@ class UdaciList
       @items.push EventItem.new(description, options)
     elsif type == "link"
       @items.push LinkItem.new(description, options)
+    elsif type == "note"
+      @items.push NoteItem.new(description)
     else 
       raise UdaciListErrors::InvalidItemError, "This is not a valid item type"
     end
@@ -27,6 +29,8 @@ class UdaciList
       puts TodoItem::todo_items.to_s
     elsif type.downcase == "link"
       puts LinkItem::link_items.to_s 
+    elsif type.downcase == "note"
+      puts NoteItem::note_items.to_s
     end     
   end
 
